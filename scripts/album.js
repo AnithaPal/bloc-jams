@@ -28,6 +28,22 @@ var albumMarconi = {
     ]
 };
 
+var albumRahman = {
+    name: "Roja",
+    artist: "A.R Rahman",
+    label: "Tamil",
+    year: "1992",
+    albumArtUrl: 'assets/images/album_covers/05.png',
+    songs: [
+            { name: 'Chinna Chinna', length: '4:55' },
+            { name: 'Ruckkumani Ruckkumani', length: '5:59' },
+            { name: 'Kaadhal Rojaavae', length: '5:03' },
+            { name: 'Pudhu Vellai', length: '5:16'},
+            { name: 'Chinna Chinna', length: '1:05'}
+        
+    ]  
+};
+
 var createSongRow = function(songNumber, songName, songLength) {
     var template = 
         '<tr class="album-view-song-item">'
