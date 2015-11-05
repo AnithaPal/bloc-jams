@@ -66,7 +66,7 @@ var setCurrentAlbum = function(album) {
     
     albumTitle.firstChild.nodeValue = album.name;
     albumArtist.firstChild.nodeValue = album.artist;
-    albumReleaseInfo.firstChild.nodeValue = album.year + '' +  album.label;
+    albumReleaseInfo.firstChild.nodeValue = album.year + ' ' +  album.label;
     albumImage.setAttribute('src', album.albumArtUrl);
     
     albumSongList.innerHTML = '';
@@ -78,4 +78,21 @@ var setCurrentAlbum = function(album) {
 
 window.onload = function() {
     setCurrentAlbum(albumPicasso);
+    toggleAlbums();
 };
+
+function toggleAlbums(){
+    var target =document.getElementsByClassName('album-cover-art')[0];
+    var albums = [albumPicasso, albumMarconi, albumRahman];
+    var index = 1;
+    
+    target.onclick = function(){ 
+        setCurrentAlbum(albums[index]);
+        index++;
+
+        if(index == albums.length){
+            index = 0;
+        }        
+ };
+};
+
